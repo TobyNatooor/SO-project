@@ -65,3 +65,10 @@ canvas {
     align-items: center;
     justify-content: center;
 }
+
+#funcA, #funcB {
+    width: 70px;
+}
+#theFunc {
+    padding: 0 10px;
+}

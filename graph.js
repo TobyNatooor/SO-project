@@ -56,30 +56,58 @@ class Graph {
         let y = 0
         let a = -realA
         let b = realB + this.canvas.height
-        console.log(`a: ${a} b: ${b}`)
         this.ctx.beginPath()
         this.ctx.lineWidth = 3
         this.ctx.moveTo(0, b)
         for (let x = (0 - this.coord.x); x < ((this.canvas.width + this.canvas.width / 10) - this.coord.x); x += this.canvas.width / 10) {
             y = (a * x + b)
             this.ctx.lineTo(x + this.coord.x, y - this.coord.y - realB * 2)
-            console.log(`x: ${x + this.coord.x} y: ${y}`)
         }
         this.ctx.stroke()
+    }
+    clear() {
+        this.ctx.beginPath()
+        this.ctx.fillStyle = "white"
+        this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height)
+        this.ctx.fillStyle = "black"
+        this.ctx.stroke()
+    }
+    init() {
+        this.clear()
+        this.drawGrid()
+        this.drawAxes()
+        this.drawNumbers()
     }
 }
 
 let g = new Graph('theCanvas')
+let funcA = document.getElementById('funcA')
+let funcB = document.getElementById('funcB')
 
-g.drawAxes()
-g.drawGrid()
-g.drawFunction(1, 50)
-g.drawNumbers()
+g.init()
 
 document.getElementById('getFunc').addEventListener('click', () => {
-    let a = document.getElementById('funcA').value
-    let b = document.getElementById('funcB').value
+    g.init()
+    let a = funcA.value
+    let b = funcB.value
+    if (a.includes(',')) a.replace(',', '.')
+    if (b.includes(',')) b.replace(',', '.')
     a = parseFloat(a)
     b = parseFloat(b)
+    if (!a) a = 0
+    if (!b) b = 0
     g.drawFunction(a, b)
 })
+
+function displayFunc() {
+    let a = funcA.value
+    let b = funcB.value
+    if (!a) a = 0
+    if (!b) b = 0
+    if (funcB.value[0] !== '-') b = '+ ' + b
+    document.getElementById('theFunc').innerHTML = `Funktionen: ${a}X ${b}`
+}
+displayFunc()
+
+funcA.addEventListener('change', displayFunc)
+funcB.addEventListener('change', displayFunc)
