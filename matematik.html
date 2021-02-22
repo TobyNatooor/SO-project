@@ -2,19 +2,27 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
-  <title>Matematik</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="graph.js" defer></script>
+    <title>Matematik</title>
 </head>
 
 <body>
-  <nav id="navbar"></nav>
-  <h1>Matematik</h1>
-  <div class="content">
-    <canvas id="coordSystem" width="600" height="500"></canvas>
-  </div>
+    <nav id="navbar"></nav>
+    <h1>Matematik</h1>
+    <div class="content">
+        <div>
+            <div class="center">
+                <input type="text" id="funcA" placeholder="a værdien">
+                <input type="text" id="funcB" placeholder="b værdien">
+                <button id="getFunc">Lav Graf</button>
+            </div>
+            <canvas id="theCanvas"></canvas>
+        </div>
+    </div>
 </body>
 
 </html>
