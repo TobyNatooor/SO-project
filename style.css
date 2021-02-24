@@ -19,9 +19,10 @@ form>button {
     background-color: #26345B;
     color: white;
     transition-duration: 0.5s;
+    font-size: 0.8rem;
     border-radius: 0%;
     padding: 10px 0;
-    width: 14.28vw;
+    width: 12.5vw;
     height: 55px;
 }
 
@@ -50,7 +51,8 @@ h2 {
 .introPara {
     color: black;
     text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-    height: 500px;
+    height: 60vw;
+    max-height: 700px;
     font-weight: bold;
     display: flex;
     align-items: center;
@@ -129,4 +131,9 @@ li {
 
 .number-list>p {
     font-size: 1rem;
+}
+
+#htg {
+    width: 100vw;
+    max-width: 1100px;
 }
