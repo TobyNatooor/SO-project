@@ -137,3 +137,7 @@ li {
     width: 100vw;
     max-width: 1100px;
 }
+
+.beregninger-list {
+    list-style-type: upper-roman;
+}
