@@ -21,7 +21,8 @@ form>button {
     transition-duration: 0.5s;
     border-radius: 0%;
     padding: 10px 0;
-    width: 20vw;
+    width: 16vw;
+    height: 55px;
 }
 
 form>button:hover {
@@ -30,7 +31,7 @@ form>button:hover {
 }
 
 .content {
-    max-width: 720px;
+    max-width: 1100px;
     margin: auto;
 }
 
@@ -39,12 +40,24 @@ h1 {
     color: white;
     text-align: center;
     padding: 10px;
-    margin-bottom: 20px;
 }
 
 h2 {
     text-align: center;
     font-size: 2rem;
+}
+
+.introPara {
+    color: black;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    height: 500px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('./imgs/roofBalloons.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 img {
@@ -98,4 +111,22 @@ ul {
 
 li {
     margin: 5px 0;
+}
+
+.row {
+    display: flex;
+}
+
+.number-list {
+    width: 400px;
+}
+
+.number-list>li {
+    font-size: 2rem;
+    margin-top: 30px;
+    list-style-type: upper-roman;
+}
+
+.number-list>p {
+    font-size: 1rem;
 }

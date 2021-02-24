@@ -1,6 +1,7 @@
 
 document.getElementById('navbar').innerHTML = `
 <form action="./index.html"><button>Forside</button></form>
+<form action="./natvidmet.html"><button>Naturvidenskabelige Metode</button></form>
 <form action="./teori.html"><button>Teori</button></form>
 <form action="./forsøg.html"><button>Forsøg</button></form>
 <form action="./matematik.html"><button>Matematik</button></form>
