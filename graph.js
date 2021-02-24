@@ -105,7 +105,8 @@ function displayFunc() {
     if (!a) a = 0
     if (!b) b = 0
     if (funcB.value[0] !== '-') b = '+ ' + b
-    document.getElementById('theFunc').innerHTML = `Funktionen: ${a}X ${b}`
+    else b = '- ' + b.replace('-', '')
+    document.getElementById('theFunc').innerHTML = `${a}X ${b}`
 }
 displayFunc()
 
