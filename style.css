@@ -16,9 +16,17 @@ nav {
 }
 
 form>button {
+    background-color: #26345B;
+    color: white;
+    transition-duration: 0.5s;
     border-radius: 0%;
     padding: 10px 0;
     width: 20vw;
+}
+
+form>button:hover {
+    background-color: #b0c0ec;
+    color: black;
 }
 
 .content {
@@ -27,9 +35,9 @@ form>button {
 }
 
 h1 {
-    text-align: center;
-    background-color: black;
+    background-color: #26345B;
     color: white;
+    text-align: center;
     padding: 10px;
     margin-bottom: 20px;
 }
@@ -87,6 +95,7 @@ th, td {
 ul {
     margin: 20px 0;
 }
+
 li {
     margin: 5px 0;
 }
